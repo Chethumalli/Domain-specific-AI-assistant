@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Domain AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- LEFT PANEL (DOMAINS) -->
+    <div class="left-panel dark-panel">
+        <h2>Select Domain</h2>
+
+        <div class="domain-card active" onclick="selectDomain('academic', this)">
+            🎓 Academic Assistance
+        </div>
+
+        <div class="domain-card" onclick="selectDomain('placement', this)">
+            💼 Placement Preparation
+        </div>
+
+        <div class="domain-card" onclick="selectDomain('research', this)">
+            📄 Research Paper Explainer
+        </div>
+
+        <div class="domain-card" onclick="selectDomain('debug', this)">
+            💻 Coding Debug Assistant
+        </div>
+
+        <div class="domain-card" onclick="selectDomain('startup', this)">
+            🚀 Startup Idea Evaluator
+        </div>
+    </div>
+
+
+    <!-- RIGHT PANEL (ASK + RESPONSE) -->
+    <div class="right-panel light-panel">
+        <h1>🚀 AI Assistant</h1>
+
+        <form method="post" action="/ask">
+            <input type="hidden" id="domainInput" name="domain" value="academic">
+
+            <textarea name="user_input" id="questionBox"
+                placeholder="Ask your question here..." required></textarea>
+
+            <div class="button-group">
+                <button type="submit" class="ask-btn">Ask AI</button>
+                <button type="button" class="clear-btn" onclick="clearText()">Clear</button>
+            </div>
+        </form>
+
+        {% if response %}
+        <div class="response-box">
+            <h3>AI Response</h3>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+<script>
+function selectDomain(domain, element) {
+    document.getElementById("domainInput").value = domain;
+
+    document.querySelectorAll(".domain-card").forEach(card => {
+        card.classList.remove("active");
+    });
+
+    element.classList.add("active");
+}
+
+function clearText() {
+    document.getElementById("questionBox").value = "";
+}
+</script>
+
+</body>
+</html>

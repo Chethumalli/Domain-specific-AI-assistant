@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE (DARK DOMAIN PANEL) */
+
+.left-panel {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.dark-panel {
+    background: #111827;
+    color: white;
+}
+
+.left-panel h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.domain-card {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #1f2937;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.domain-card:hover {
+    background: #374151;
+}
+
+.domain-card.active {
+    border: 2px solid #6366f1;
+    background: #374151;
+}
+
+
+/* RIGHT SIDE (LIGHT MAIN PANEL) */
+
+.right-panel {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.light-panel {
+    background: #f9fafb;
+    color: black;
+}
+
+.right-panel h1 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: none;
+}
+
+.button-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.ask-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ask-btn:hover {
+    background: #4338ca;
+}
+
+.clear-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: #dc2626;
+}
+
+.response-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.response-box h3 {
+    margin-top: 0;
+}
