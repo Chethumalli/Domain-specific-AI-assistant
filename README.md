@@ -244,8 +244,4 @@ Building scalable AI systems 🚀
 
 GitHub: https://github.com/Chethumalli  
 
----
 
-## 📜 License
-
-This project is licensed under the MIT License.
