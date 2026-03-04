@@ -146,7 +146,6 @@ Open in browser:
 ```
 http://127.0.0.1:8000
 ```
-
 ---
 
 ## 🧠 Example Domain Behaviors
@@ -242,6 +241,4 @@ If you found this useful, consider giving it a ⭐ star!
 AI & ML Enthusiast  
 Building scalable AI systems 🚀  
 
-GitHub: https://github.com/Chethumalli  
-
-
+GitHub: https://github.com/Chethumalli
