@@ -187,23 +187,6 @@ Evaluates:
 
 ---
 
-## 🌍 Deployment Guide (Optional)
-
-### Deploy using Render
-
-1. Push code to GitHub
-2. Create new Web Service on Render
-3. Add environment variable:
-   ```
-   GROQ_API_KEY
-   ```
-4. Set Start Command:
-   ```
-   uvicorn main:app --host 0.0.0.0 --port 10000
-   ```
-
----
-
 ## 🎯 Learning Outcomes
 
 This project helps you understand:
@@ -242,3 +225,4 @@ AI & ML Enthusiast
 Building scalable AI systems 🚀  
 
 GitHub: https://github.com/Chethumalli
+
